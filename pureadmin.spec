@@ -12,6 +12,7 @@ Source0:	http://dl.sourceforge.net/purify/%{name}-%{version}.tar.bz2
 URL:		http://purify.sourceforge.net/
 BuildRequires:	fam-devel pkgconfig intltool autoconf2.5 libglade2.0-devel
 Requires:	pure-ftpd
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 PureAdmin is a graphical tool used to make the management of PureFTPd
