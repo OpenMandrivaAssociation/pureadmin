@@ -1,6 +1,6 @@
 %define	name	pureadmin
 %define	version	0.4
-%define	release	%mkrel 4
+%define	release	%mkrel 5
 
 Name:		%name
 Version:	%version
