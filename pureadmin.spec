@@ -1,3 +1,5 @@
+%define Werror_cflags %nil
+
 %define	name	pureadmin
 %define	version	0.4
 %define	release	%mkrel 5
@@ -10,9 +12,9 @@ License:	GPL
 Group:		Networking/File transfer
 Source0:	http://dl.sourceforge.net/purify/%{name}-%{version}.tar.bz2
 URL:		http://purify.sourceforge.net/
-BuildRequires:	fam-devel pkgconfig intltool autoconf2.5 libglade2.0-devel
+BuildRequires:	fam-devel pkgconfig intltool autoconf2.5
+BuildRequires:	pkgconfig(libglade-2.0)
 Requires:	pure-ftpd
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 PureAdmin is a graphical tool used to make the management of PureFTPd
@@ -26,15 +28,11 @@ mind so it should integrate nicely with at least GNOME.
 
 %build
 %configure2_5x
-%make
+%make LIBS="-lX11 -lpthread -lpam -lfam -ldl -lcrypt -lm"
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 %find_lang %{name}
-
-%clean
-rm -rf %buildroot
 
 %post
 gtk-update-icon-cache --force --quiet %{_datadir}/icons/hicolor
