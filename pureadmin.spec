@@ -28,7 +28,7 @@ mind so it should integrate nicely with at least GNOME.
 
 %build
 %configure2_5x
-%make LIBS="-lX11 -lpthread -lpam -lfam -ldl -lcrypt -lm"
+%make LIBS="-lX11 -lpthread -lfam -ldl -lcrypt -lm"
 
 %install
 %makeinstall_std
