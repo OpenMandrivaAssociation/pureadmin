@@ -11,7 +11,7 @@ Summary:	PureFTPd graphical manager
 License:	GPL
 Group:		Networking/File transfer
 Source0:	http://dl.sourceforge.net/purify/%{name}-%{version}.tar.bz2
-URL:		http://purify.sourceforge.net/
+URL:		https://purify.sourceforge.net/
 BuildRequires:	fam-devel pkgconfig intltool autoconf2.5
 BuildRequires:	pkgconfig(libglade-2.0)
 Requires:	pure-ftpd
